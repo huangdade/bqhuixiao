@@ -1,15 +1,34 @@
-#courselist { width: 100%; margin: auto; padding: 20px 0px 20px 0px; display: block; }
+#teacherlist { margin: 20px 0px 20px 0px; padding: 0px 20px 10px 20px; }
 
-.img_box { list-style: none; margin: 0px; padding: 0px; }
+#teacherlist h2 { color: black; font-weight: normal; border-bottom: 1px dotted red; }
 
-.img_box li { float: left; width: 160px; }
+.img_box { list-style: none; margin: 0px; padding: 0px; height: 260px; }
 
-.teacher_card { display: block; width: 180px; height: 220px; }
+.img_box li { float: left; }
 
-.teacher_card img { width: 160px; height: 206px; }
+.teacher_card { text-align: center; margin: 0px 10px 0px 10px; }
 
-#articlelist { display: block; clear: left; }
+.box {  width: 160px; height: 160px; }
 
-#videolist { display: block; clear: left; }
+.teacher_card img { display: block; border: 1px solid #CCCCCC; }
 
+.teacher_card p { font-weight: normal; }
 
+#courselist { margin: 20px 0px 20px 0px; padding: 0px 20px 10px 20px; }
+
+#courselist h2 { color: black; font-weight: normal; border-bottom: 1px dotted red; }
+
+#articlelist { margin: 20px 0px 20px 0px; padding: 0px 20px 10px 20px; }
+
+#articlelist h2 { color: black; font-weight: normal; border-bottom: 1px dotted red; }
+
+#videolist { margin: 20px 0px 20px 0px; padding: 0px 20px 10px 20px; }
+
+#videolist h2 { color: black; font-weight: normal; border-bottom: 1px dotted red; }
+
+/* zoom picture */
+.thumbImage { max-width: 160px; max-height: 160px; } /* for Firefox & IE7 */
+* html .thumbImage { /* for IE6 */
+	width: expression(this.width > 160 && this.width > this.height ? 160 : auto);
+	height: expression(this.height > 160 ? 160 : auto);
+}
