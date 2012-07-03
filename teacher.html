@@ -64,18 +64,19 @@
 						szm = list.getAttribute("szm");
 						document.write("<li>");
 						document.write("<span>" + szm + "</span>");
-						teachers = list.childNodes;
-						height = teacher.length * 20;
+						teachers = list.getElementsByTagName("teacher");
+						height = Math.ceil(teachers.length / 10) * 20;
 						document.write("<ul style='height:" + height + "px'>");
 						for (j = 0; j < teachers.length; j++)
 						{
 							teacher = teachers[j];
-							document.write("<li><a href='" + teacher.getAttribute("link") + "'>" + teacher.getAttribute("name") + "</a></li>" 
+							document.write("<li><a href='" + teacher.getAttribute("link") + "'>" + teacher.getAttribute("name") + "</a></li>");
 						}
 						document.write("</ul>");
 						document.write("</li>");
 					}
 				</script>
+				<div class="clear" />
 			</ul>
 		</div>
 		<div id="hy"></div>
