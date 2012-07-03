@@ -61,17 +61,16 @@
 					for (i = 0; i < lists.length; i++)
 					{
 						list = lists[i];
-						szm = list.getAttributeNode("szm").nodeValue;
+						szm = list.getAttribute("szm");
 						document.write("<li>");
 						document.write("<span>" + szm + "</span>");
-						teachers = list.getElementByTagName("teacher");
-						teacher_num = teachers.length;
-						height = teacher_num * 20;
+						teachers = list.childNodes;
+						height = teacher.length * 20;
 						document.write("<ul style='height:" + height + "px'>");
-						for (j = 0; j < list.length; j++)
+						for (j = 0; j < teachers.length; j++)
 						{
-							teacher = list[j];
-							document.write("<li><a href='" + teacher.getElementByTagName("link")[0].childNode[0].nodeValue + "'>" + teacher.getElementByTagName("name")[0].childNode[0].nodeValue + "</a></li>" 
+							teacher = teachers[j];
+							document.write("<li><a href='" + teacher.getAttribute("link") + "'>" + teacher.getAttribute("name") + "</a></li>" 
 						}
 						document.write("</ul>");
 						document.write("</li>");

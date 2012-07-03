@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <teacher_list_szm>
 	<teacher_list szm="A">
-		<teacher>
-			<name>teacher1</name>
-			<link></link>
-		</teacher>
+		<teacher name="teacher1" link="" />
 	</teacher_list>
 	<teacher_list szm="B">
-		<teacher>
-			<name>teacher1</name>
-			<link></link>
-		</teacher>
+		<teacher name="teacher1" link="" />
 	</teacher_list>
 	<teacher_list szm="C">
-		<teacher>
-			<name>teacher1</name>
-			<link></link>
-		</teacher>
+		<teacher name="teacher1" link="" />
 	</teacher_list>
 	<teacher_list szm="D">
-		<teacher>
-			<name>teacher1</name>
-			<link></link>
-		</teacher>
+		<teacher name="teacher1" link="" />
 	</teacher_list>
 	<teacher_list szm="W">
-		<teacher>
-			<name>王力子</name>
-			<link>jiangshi/wanglizi/wanglizi.html</link>
-		</teacher>
+		<teacher name="王力子" link="jiangshi/wanglizi/wanglizi.html" />
 	</teacher_list>
 </teacher_list_szm>
