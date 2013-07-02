@@ -23,7 +23,7 @@ body { margin: 0px; padding: 0px; font-size: 16px; }
 
 .menu ul { list-style: none; margin: 0px; padding: 0px; }
 
-.menu li { float: left; width: 133px; background:#CCC; margin-left: 3px; line-height: 30px; }
+.menu li { float: left; width: 133.5px; background:#CCC; margin-left: 3px; line-height: 30px; }
 
 .menu a { display: block; text-align: center; height: 30px; }
 
