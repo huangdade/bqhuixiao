@@ -1,6 +1,6 @@
 body { margin: 0px; padding: 0px; font-size: 16px; }
 
-.wrapper { width: 960px; margin: auto; padding: 0px; overflow: hidden; }
+.wrapper { width: 960px; margin: auto; padding: 0px 2px 0px 2px; overflow: hidden; }
 
 .box-shadow {
 	-moz-box-shadow: 20px 0px 20px #000;
