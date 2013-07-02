@@ -1,0 +1,15 @@
+#courselist { width: 100%; margin: auto; padding: 20px 0px 20px 0px; display: block; }
+
+.img_box { list-style: none; margin: 0px; padding: 0px; }
+
+.img_box li { float: left; width: 160px; }
+
+.teacher_card { display: block; width: 180px; height: 220px; }
+
+.teacher_card img { width: 160px; height: 206px; }
+
+#articlelist { display: block; clear: left; }
+
+#videolist { display: block; clear: left; }
+
+

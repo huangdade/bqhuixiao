@@ -1,6 +1,6 @@
 body { margin: 0px; padding: 0px; font-size: 16px; }
 
-.wrapper { width: 960px; margin: auto; padding: 0px; overflow: hidden; }
+.wrapper { width: 960px; margin: auto; padding: 0px 2px 0px 2px; overflow: hidden; }
 
 .box-shadow {
 	-moz-box-shadow: 20px 0px 20px #000;
@@ -23,7 +23,7 @@ body { margin: 0px; padding: 0px; font-size: 16px; }
 
 .menu ul { list-style: none; margin: 0px; padding: 0px; }
 
-.menu li { float: left; width: 134px; background:#CCC; margin-left: 3px; line-height: 30px; }
+.menu li { float: left; width: 133.9px; background:#CCC; margin-left: 3px; line-height: 30px; }
 
 .menu a { display: block; text-align: center; height: 30px; }
 
@@ -41,7 +41,7 @@ body { margin: 0px; padding: 0px; font-size: 16px; }
 
 .dotline { border: 1px dotted gray; }
 
-.bottommenu { width:100%; display: block; text-align: center; margin: 0px 300px 20px 300px; }
+.bottommenu { width:100%; display: block; text-align: center; margin: 0px 300px 20px 300px; clear: left; }
 
 .bottommenu ul { list-style: none; margin: 0px; padding: 0px; }
 
