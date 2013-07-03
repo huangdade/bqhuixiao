@@ -1,0 +1,70 @@
+#tophead {
+	width: 100%;
+	color: white;
+	background-color: black;
+	padding: 5px 0px 5px 10px;
+	font-size: 90%;
+}
+
+#tophead a {
+	color: white;
+}
+
+#tophead a:link {
+	text-decoration: none;
+}
+
+#tophead a:visited {
+	text-decoration: none;
+}
+
+#tophead a:hover {
+	text-decoration: none;
+}
+
+#tophead a:active {
+	text-decoration: none;
+}
+
+#head {
+	width: 100%;
+}
+#head span {
+	font-size: 400%;
+}
+
+#guide {
+	width: 100%;
+	font-size: 120%;
+	font-weight: bold;
+	background-color: red;
+	padding: 4px 10px 4px 10px;
+}
+
+#guide ul li a {
+	width: 100px;
+	color: white;
+	text-align: center;
+}
+
+#guide ul li a:hover {
+	background-color: #cccccc;
+}
+
+#guide ul li a:active {
+	background-color: #cccccc;
+}
+
+#body {
+	width: 100%;
+	padding: 10px 0px 0px 10px;
+}
+
+#figure {
+	border: 1px solid #eeeeee;
+	width: 200px;
+	margin: 0px;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.01 transitional//en" "http://www.w3.org/tr/html4/loose.dtd">
+<html>
+<head>
+	<title>百强讲师-视频播放</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keyword" content="" />
+	<meta name="description" content="" />
+	<link href="../video-js/video-js.css" rel="stylesheet">
+	<script src="../video-js/video.js"></script>
+	<script>
+  		videojs.options.flash.swf = "../video-js/video-js.swf"
+	</script>
+	<link href="../css/player.css" rel="stylesheet" type="text/css" />
+	<link href="../css/js.css" rel="stylesheet" type="text/css" />
+	<link href="../css/common.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		function requestUrlPara(paras)
+		{
+			var url = location.href;
+			var paraStrings = url.substring(url.indexOf("?")+1, url.length).split("&");
+			var paraObj = {};
+			var len = paraStrings.length;
+			for (i = 0; i < len; i++)
+			{
+				paraStr = paraStrings[i];
+				paraObj[paraStr.substring(0, paraStr.indexOf("=")).toLowerCase()] = paraStr.substring(paraStr.indexOf("=")+1, paraStr.length);
+			}
+			var returnValue = paraObj[paras.toLowerCase()];
+			if (typeof(returnValue) == "undefined")
+			{
+				return "";
+			}
+			else
+			{
+				return decodeURI(returnValue);
+			}
+		}
+	</script>
+</head>
+<body>
+<div id="tophead">
+		<a href="http://www.bqhuixiao.com">百强讲师</a>
+		<span>&gt;</span>
+		<span>视频播放</span>
+</div>
+<div id="player">
+	<script type="text/javascript">
+		var thevideo = "../videos/" + requestUrlPara("video");
+		var thename = requestUrlPara("name");
+		document.writeln("<p>name:" + thename + "</p>");
+		document.writeln("<p>video path: " + thevideo + "</p>");
+		document.getElementById("player_mp4").src = thevideo;
+		document.getElementById("player_webm").src = thevideo;
+		document.getElementById("player_ogg").src = thevideo;
+	</script>
+	<p id="video_name"></p>
+	<video id="player_video" class="video-js vjs-default-skin"
+			controls preload="auto" width="640" height="264"
+			poster="http://video-js.zencoder.com/oceans-clip.png"
+			data-setup='{"example_option":true}'>
+		<source id="player_mp4" src="toadd.mp4" type='video/mp4' />
+		<source id="player_webm" src="toadd.webm" type='video/webm' />
+		<source id="player_ogg" src="toadd.ogv" type='video/ogg' />
+	</video>
+	<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
+			data-setup="{}">
+		<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+		<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+		<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+		<track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+	</video>
+	</div>
+</body>
+</html>
+
