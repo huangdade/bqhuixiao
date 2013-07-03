@@ -1,0 +1,11 @@
+#szm { margin: 20px 0px 20px 0px; padding: 0px 20px 10px 20px; }
+
+#szm h2 { color: black; font-weight: normal; border-bottom: 1px dotted red; }
+
+#szm span { float: left; }
+
+.szm_list { list-style: none; }
+
+.szm_list li { width: 80px; }
+
+.szm_list li ul li { float: left; }

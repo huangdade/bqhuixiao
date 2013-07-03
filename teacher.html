@@ -7,6 +7,30 @@
 	<meta name="description" content="" />
 	<link href="css/teacher.css" rel="stylesheet" type="text/css" />
 	<link href="css/common.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="icons/favicon.ico">
+	<script type="text/javascript">
+		function loadXMLDoc(dname) 
+		{
+			var xmlDoc;
+			// code for IE
+			if (window.ActiveXObject)
+			{
+				xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+			}
+			// code for Mozilla, Firefox, Opera, etc.
+			else if (document.implementation && document.implementation.createDocument)
+			{
+				xmlDoc=document.implementation.createDocument("","",null);
+			}
+			else
+			{
+				alert('Your browser cannot handle this script');
+			}
+			xmlDoc.async=false;
+			xmlDoc.load(dname);
+			return(xmlDoc);
+		}
+	</script>
 </head>
 <body>
 <div class="wrapper">
@@ -27,8 +51,47 @@
 		</ul>
 	</div>
 	<div id="body">
-	</div>
-	<div id="foot">
+		<div id="search"></div>
+		<div id="szm" class="box-shadow">
+			<h2>首字母</h2>
+			<ul class="szm_list">
+				<script type="text/javascript">
+					xmlDoc = loadXMLDoc("data/teacher_list_szm.xml");
+					lists = xmlDoc.getElementsByTagName("teacher_list");
+					for (i = 0; i < lists.length; i++)
+					{
+						list = lists[i];
+						szm = list.getAttributeNode("szm").nodeValue;
+						document.write("<li>");
+						document.write("<span>" + szm + "</span>");
+						teachers = list.getElementByTagName("teacher");
+						teacher_num = teachers.length;
+						height = teacher_num * 20;
+						document.write("<ul style='height:" + height + "px'>");
+						for (j = 0; j < list.length; j++)
+						{
+							teacher = list[j];
+							document.write("<li><a href='" + teacher.getElementByTagName("link")[0].childNode[0].nodeValue + "'>" + teacher.getElementByTagName("name")[0].childNode[0].nodeValue + "</a></li>" 
+						}
+						document.write("</ul>");
+						document.write("</li>");
+					}
+				</script>
+			</ul>
+		</div>
+		<div id="hy"></div>
+			<h2>按领域</h2>
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		<div id="ly">
+			<h2>按行业</h2>
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
 		<div class="bottommenu">
 			<ul>
 				<li><a href="index.html">首页</a></li>
@@ -41,6 +104,8 @@
 			</ul>
 		</div>
 		<hr class="clear" />
+	</div>
+	<div id="foot">
 		<div id="copyright">
 			<p>Copyright 2013.7.1</p>
 		</div>
