@@ -8,28 +8,14 @@
 	<link href="css/teacher.css" rel="stylesheet" type="text/css" />
 	<link href="css/common.css" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="icons/favicon.ico">
-	<script type="text/javascript">
-		function loadXMLDoc(dname) 
-		{
-			var xmlDoc;
-			// code for IE
-			if (window.ActiveXObject)
-			{
-				xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
-			}
-			// code for Mozilla, Firefox, Opera, etc.
-			else if (document.implementation && document.implementation.createDocument)
-			{
-				xmlDoc=document.implementation.createDocument("","",null);
-			}
-			else
-			{
-				alert('Your browser cannot handle this script');
-			}
-			xmlDoc.async=false;
-			xmlDoc.load(dname);
-			return(xmlDoc);
-		}
+	<script type="text/javascript" lanuage="javascript">
+	var lists = document.getElementById("szm_list").getElementByTagName("ul");
+	for (i = 0; i < lists.length; i++)
+	{
+		list = lists[i];
+		teacher_num = list.getElementByTagName("li").length;
+		height = Math.ceil(teacher_num / 10) * 22224	list.style = "height" + height + "px;";
+	}
 	</script>
 </head>
 <body>
@@ -54,28 +40,229 @@
 		<div id="search"></div>
 		<div id="szm" class="box-shadow">
 			<h2>首字母</h2>
-			<ul class="szm_list">
-				<script type="text/javascript">
-					xmlDoc = loadXMLDoc("data/teacher_list_szm.xml");
-					lists = xmlDoc.getElementsByTagName("teacher_list");
-					for (i = 0; i < lists.length; i++)
-					{
-						list = lists[i];
-						szm = list.getAttribute("szm");
-						document.write("<li>");
-						document.write("<span>" + szm + "</span>");
-						teachers = list.getElementsByTagName("teacher");
-						height = Math.ceil(teachers.length / 10) * 20;
-						document.write("<ul style='height:" + height + "px'>");
-						for (j = 0; j < teachers.length; j++)
-						{
-							teacher = teachers[j];
-							document.write("<li><a href='" + teacher.getAttribute("link") + "'>" + teacher.getAttribute("name") + "</a></li>");
-						}
-						document.write("</ul>");
-						document.write("</li>");
-					}
-				</script>
+			<ul id="szm_list">
+				<li>
+					<span>A</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>B</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>C</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>D</span>
+					<ul>
+						<li><a href="jiangshi/wanglizi/wanglizi.html">王力子</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>A</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>A</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>A</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>A</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>A</span>
+					<ul>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+						<li><a href="">teacher</a></li>
+					</ul>
+				</li>
 				<div class="clear" />
 			</ul>
 		</div>
